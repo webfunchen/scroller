@@ -1,0 +1,351 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>pc端自定义滚动条-基于kissy</title>
+<link rel="stylesheet" href="http://g.tbcdn.cn/??tb/global/2.6.10/global-min.css,tb/tb-fp/1.8.3/style-min.css?t=20140305" type="text/css" />
+<style type="text/css">
+.noselect{moz-user-select: -moz-none;-moz-user-select: none;-o-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none;}
+    .sescro-w{width:990px;height:300px;margin:10px auto 0 auto;overflow:hidden;background:#000;color:#fff;position:relative;z-index:1;}
+    .sescro-s{height:100%;overflow-y:auto;width:1010px;}
+    .sescro-content{height:auto;overflow:hidden;margin-right:20px;}
+    .se-barw{height:90%;position:absolute;right:10px;top:5%;z-index:2;background:#eee;border-radius:3px;width:10px;}
+    .se-bar{width:100%;position:absolute;left:-5px;top:0;height:20px;cursor:pointer;overflow:hidden;width:20px;}
+    .se-bar span{display:block;margin:1px;background:#f00;height:18px;border-radius:9px;box-shadow:0 0 4px #fff;}
+
+
+.scroller-1{height:600px;}
+.scroller-1 .se-barw{width:5px;}
+.scroller-1 .se-bar{width:10px;height:10px;left:-2px;}
+.scroller-1 .se-bar span{height:8px;}
+</style>    
+<script src="http://g.tbcdn.cn/??kissy/k/1.4.2/seed-min.js,tb/global/2.6.10/global-min.js"></script>
+</head>
+
+<body>
+<div class="sescro-w scroller-0">
+	<div class="sescro-s">
+		<div class="sescro-content">
+			<!--文本内容-->
+			<p style="padding:10px;">
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容最后一句<br >
+			</p>
+		</div>
+		
+	</div>
+	<div class="se-barw noselect">
+			<p class="se-bar">
+				<span></span>
+			</p>
+	</div>
+</div>
+
+<div class="sescro-w scroller-1">
+	<div class="sescro-s">
+		<div class="sescro-content">
+			<!--文本内容-->
+			<p style="padding:10px;">
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容最后一句<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容最后一句<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容最后一句<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容<br >
+				这里是文本内容最后一句<br >
+			</p>
+		</div>
+		
+	</div>
+	<div class="se-barw noselect">
+			<p class="se-bar">
+				<span></span>
+			</p>
+	</div>
+</div>
+
+<script type="text/javascript">
+KISSY.add("se-scrollbar",function(S,Node,Event){
+	var $=S.all,
+	config={
+		debug:false,
+		log:function(d){
+			if(this.debug)
+			{console.log(d);}
+		}
+	}
+	var se_scrollbar=function(obj){
+		this.node=obj.node||$(".sescro-w").item(0);
+		this.pnode=this.node.one(".sescro-s");
+		this.innode=this.node.one(".sescro-content");
+		this.allh=this.innode.height();//总高度
+		this.sh=this.pnode.height();//一屏高度
+		this.bar=this.node.one(".se-barw");
+		this.barbtn=this.node.one(".se-bar");
+		this.barbtnh=this.barbtn.height();//按钮的高度
+		this.barh=this.bar.height()-this.barbtnh;//滚动条的高度
+		this.init();
+		this.scroller();
+		this.drag();
+	}
+	se_scrollbar.prototype={
+		pos:{oldy:0,newy:0},
+		isdrag:false,
+		dragmove:function(top){
+			//鼠标拖动滚动条后的，对应内容也拖动,top为滚动条的top值
+			var _this=this;
+			config.log(top/_this.barh);
+			_this.pnode.scrollTop(top/_this.barh*(_this.allh-_this.sh));
+			//_this.barbtn.css("top",_this.pnode.scrollTop()/(_this.allh-_this.sh)*_this.barh);
+		},
+		drag:function(){
+			var _this=this,func="",movedis=0,oldtop=parseInt(_this.barbtn.css("top"));
+			_this.barbtn.on("mousedown",function(s){
+				_this.isdrag=true;
+				_this.pos.oldy=s.clientY;
+				func="";
+				oldtop=parseInt(_this.barbtn.css("top"))
+				func=function(e){
+					   // 绑定鼠标移动事件
+					   _this.pos.newy=e.clientY;
+					   movedis=_this.pos.newy-_this.pos.oldy;
+					   move=oldtop+movedis;
+					   if(move<0){move=0;}
+					   else if(move>_this.barh)
+					   	{move=_this.barh;}
+					   _this.barbtn.css("top",move);
+					   _this.dragmove(move);
+					   e.preventDefault();
+				}
+				Event.delegate(document,'mousemove','body',func);
+			});
+			$(document).on("mouseup",function(e){
+				_this.pos.newy=0;
+				func="";
+				_this.isdrag=false;
+				Event.undelegate(document,'mousemove','body',func);
+			});
+		},
+		barpercent:function(){
+			var _this=this;
+			_this.barbtn.css("top",_this.pnode.scrollTop()/(_this.allh-_this.sh)*_this.barh);
+		},
+		scroller:function(){
+			//滚动事件
+			var _this=this,sctop=0;
+			_this.pnode.on("scroll",function(){
+				if(!_this.isdrag)
+				_this.barpercent();
+			});
+		},
+		init:function(){
+			this.barpercent();
+		}
+	};
+	return se_scrollbar;
+},{requires:["node","event"]});
+KISSY.use("node,se-scrollbar",function(S,Node,seBar){
+	var $=S.all;
+	new seBar({
+		node:$(".scroller-0")
+	});
+	new seBar({
+		node:$(".scroller-1")
+	});
+
+});
+</script>
+</body>
+</html>
